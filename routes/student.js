@@ -12,9 +12,7 @@ router.post("/add/student",(req,res)=>{
 router.get('/students',(req,res)=>{
     studentcontroller.getStudents(req,res)
 })
-
 router.get('/student/page/for/edit/:id',(req,res)=>{
-    studentcontroller.getParticularEditStudent(req,res);
-
+    studentcontroller.getParticularEditStudent(req,res)
 })
 module.exports=router;

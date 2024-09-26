@@ -15,7 +15,7 @@ async function addStudent(req,res){
 }
 async function getStudents(req,res){
     try{
-        let students=await Student.find();
+        let students=await Student.find({});
         res.render('studentlist',{
             students:students
         })
@@ -25,12 +25,11 @@ async function getStudents(req,res){
         console.log(err.message);
     }
 }
-
 async function getParticularEditStudent(req,res){
     try{
         let id=req.params.id;
         let student=await Student.find({_id:id})
-        console.log(student)
+        console.log(student) 
         // res.send(student)
         //after making studentforedit
 
